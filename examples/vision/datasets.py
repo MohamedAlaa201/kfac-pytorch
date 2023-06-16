@@ -25,6 +25,7 @@ def get_cifar(
     DataLoader[T],
 ]:
     """Get cifar dataset."""
+    # TODO: Make image size of variable length depending on the model used
     transform_train = transforms.Compose(
         [
             transforms.RandomCrop(32, padding=4),

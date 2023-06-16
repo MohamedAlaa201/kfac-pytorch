@@ -1,0 +1,442 @@
+torchrun --standalone --nnodes 1 --nproc_per_node=1 examples/torch_cifar10_resnet.py
+master_addr is only used for static rdzv_backend and when rdzv_endpoint is not specified.
+/home/mohamed/Desktop/Research/Projects/Second Order/kfac_pytorch/kfac/base_preconditioner.py:14: UserWarning: NVIDIA Apex is not installed or was not installed with --cpp_ext. Falling back to PyTorch flatten and unflatten.
+  from kfac.distributed import get_rank
+Collecting env info...
+PyTorch version: 2.0.1
+Is debug build: False
+CUDA used to build PyTorch: 11.7
+ROCM used to build PyTorch: N/A
+
+OS: Ubuntu 22.04.2 LTS (x86_64)
+GCC version: (Ubuntu 11.3.0-1ubuntu1~22.04.1) 11.3.0
+Clang version: Could not collect
+CMake version: version 3.26.3
+Libc version: glibc-2.35
+
+Python version: 3.9.16 (main, Mar  8 2023, 14:00:05)  [GCC 11.2.0] (64-bit runtime)
+Python platform: Linux-5.19.0-43-generic-x86_64-with-glibc2.35
+Is CUDA available: True
+CUDA runtime version: Could not collect
+CUDA_MODULE_LOADING set to: LAZY
+GPU models and configuration: GPU 0: NVIDIA GeForce GTX 1080 with Max-Q Design
+Nvidia driver version: 530.30.02
+cuDNN version: Could not collect
+HIP runtime version: N/A
+MIOpen runtime version: N/A
+Is XNNPACK available: True
+
+CPU:
+Architecture:                    x86_64
+CPU op-mode(s):                  32-bit, 64-bit
+Address sizes:                   39 bits physical, 48 bits virtual
+Byte Order:                      Little Endian
+CPU(s):                          12
+On-line CPU(s) list:             0-11
+Vendor ID:                       GenuineIntel
+Model name:                      Intel(R) Core(TM) i7-8750H CPU @ 2.20GHz
+CPU family:                      6
+Model:                           158
+Thread(s) per core:              2
+Core(s) per socket:              6
+Socket(s):                       1
+Stepping:                        10
+CPU max MHz:                     4100.0000
+CPU min MHz:                     800.0000
+BogoMIPS:                        4399.99
+Flags:                           fpu vme de pse tsc msr pae mce cx8 apic sep mtrr pge mca cmov pat pse36 clflush dts acpi mmx fxsr sse sse2 ss ht tm pbe syscall nx pdpe1gb rdtscp lm constant_tsc art arch_perfmon pebs bts rep_good nopl xtopology nonstop_tsc cpuid aperfmperf pni pclmulqdq dtes64 monitor ds_cpl vmx est tm2 ssse3 sdbg fma cx16 xtpr pdcm pcid sse4_1 sse4_2 x2apic movbe popcnt tsc_deadline_timer aes xsave avx f16c rdrand lahf_lm abm 3dnowprefetch cpuid_fault epb invpcid_single pti ssbd ibrs ibpb stibp tpr_shadow vnmi flexpriority ept vpid ept_ad fsgsbase tsc_adjust bmi1 avx2 smep bmi2 erms invpcid mpx rdseed adx smap clflushopt intel_pt xsaveopt xsavec xgetbv1 xsaves dtherm ida arat pln pts hwp hwp_notify hwp_act_window hwp_epp md_clear flush_l1d arch_capabilities
+Virtualization:                  VT-x
+L1d cache:                       192 KiB (6 instances)
+L1i cache:                       192 KiB (6 instances)
+L2 cache:                        1.5 MiB (6 instances)
+L3 cache:                        9 MiB (1 instance)
+NUMA node(s):                    1
+NUMA node0 CPU(s):               0-11
+Vulnerability Itlb multihit:     KVM: Mitigation: VMX disabled
+Vulnerability L1tf:              Mitigation; PTE Inversion; VMX conditional cache flushes, SMT vulnerable
+Vulnerability Mds:               Mitigation; Clear CPU buffers; SMT vulnerable
+Vulnerability Meltdown:          Mitigation; PTI
+Vulnerability Mmio stale data:   Mitigation; Clear CPU buffers; SMT vulnerable
+Vulnerability Retbleed:          Mitigation; IBRS
+Vulnerability Spec store bypass: Mitigation; Speculative Store Bypass disabled via prctl
+Vulnerability Spectre v1:        Mitigation; usercopy/swapgs barriers and __user pointer sanitization
+Vulnerability Spectre v2:        Mitigation; IBRS, IBPB conditional, RSB filling, PBRSB-eIBRS Not affected
+Vulnerability Srbds:             Mitigation; Microcode
+Vulnerability Tsx async abort:   Not affected
+
+Versions of relevant libraries:
+[pip3] kfac-pytorch==0.4.1
+[pip3] numpy==1.24.3
+[pip3] torch==2.0.1
+[pip3] torchaudio==2.0.2
+[pip3] torchdata==0.6.1
+[pip3] torchinfo==1.5.2
+[pip3] torchmetrics==0.11.4
+[pip3] torchtext==0.15.2
+[pip3] torchvision==0.15.2
+[conda] blas                      1.0                         mkl  
+[conda] ffmpeg                    4.3                  hf484d3e_0    pytorch
+[conda] kfac-pytorch              0.4.1                    pypi_0    pypi
+[conda] mkl                       2023.1.0         h6d00ec8_46342  
+[conda] mkl-service               2.4.0            py39h5eee18b_1  
+[conda] mkl_fft                   1.3.6            py39h417a72b_1  
+[conda] mkl_random                1.2.2            py39h417a72b_1  
+[conda] numpy                     1.24.3           py39hf6e8229_1  
+[conda] numpy-base                1.24.3           py39h060ed82_1  
+[conda] pytorch                   2.0.1           py3.9_cuda11.7_cudnn8.5.0_0    pytorch
+[conda] pytorch-cuda              11.7                 h778d358_5    pytorch
+[conda] pytorch-mutex             1.0                        cuda    pytorch
+[conda] torchaudio                2.0.2                py39_cu117    pytorch
+[conda] torchdata                 0.6.1                    pypi_0    pypi
+[conda] torchinfo                 1.5.2                    pypi_0    pypi
+[conda] torchmetrics              0.11.4                   pypi_0    pypi
+[conda] torchtext                 0.15.2                   pypi_0    pypi
+[conda] torchtriton               2.0.0                      py39    pytorch
+[conda] torchvision               0.15.2               py39_cu117    pytorch
+
+Global rank 0 initialized: local_rank = 0, world_size = 1
+Files already downloaded and verified
+Files already downloaded and verified
+/home/mohamed/anaconda3/envs/practice/lib/python3.9/site-packages/torchinfo/torchinfo.py:370: UserWarning: TypedStorage is deprecated. It will be removed in the future and UntypedStorage will be the only storage class. This should only matter to you if you are using storages directly.  To access UntypedStorage directly, use tensor.untyped_storage() instead of tensor.storage()
+  action_fn=lambda data: sys.getsizeof(data.storage()),
+==========================================================================================
+Layer (type:depth-idx)                   Output Shape              Param #
+==========================================================================================
+ResNet                                   --                        --
+├─Conv2d: 1-1                            [128, 16, 32, 32]         432
+├─BatchNorm2d: 1-2                       [128, 16, 32, 32]         32
+├─Sequential: 1-3                        [128, 16, 32, 32]         --
+│    └─BasicBlock: 2-1                   [128, 16, 32, 32]         --
+│    │    └─Conv2d: 3-1                  [128, 16, 32, 32]         2,304
+│    │    └─BatchNorm2d: 3-2             [128, 16, 32, 32]         32
+│    │    └─Conv2d: 3-3                  [128, 16, 32, 32]         2,304
+│    │    └─BatchNorm2d: 3-4             [128, 16, 32, 32]         32
+│    │    └─Sequential: 3-5              [128, 16, 32, 32]         --
+│    └─BasicBlock: 2-2                   [128, 16, 32, 32]         --
+│    │    └─Conv2d: 3-6                  [128, 16, 32, 32]         2,304
+│    │    └─BatchNorm2d: 3-7             [128, 16, 32, 32]         32
+│    │    └─Conv2d: 3-8                  [128, 16, 32, 32]         2,304
+│    │    └─BatchNorm2d: 3-9             [128, 16, 32, 32]         32
+│    │    └─Sequential: 3-10             [128, 16, 32, 32]         --
+│    └─BasicBlock: 2-3                   [128, 16, 32, 32]         --
+│    │    └─Conv2d: 3-11                 [128, 16, 32, 32]         2,304
+│    │    └─BatchNorm2d: 3-12            [128, 16, 32, 32]         32
+│    │    └─Conv2d: 3-13                 [128, 16, 32, 32]         2,304
+│    │    └─BatchNorm2d: 3-14            [128, 16, 32, 32]         32
+│    │    └─Sequential: 3-15             [128, 16, 32, 32]         --
+│    └─BasicBlock: 2-4                   [128, 16, 32, 32]         --
+│    │    └─Conv2d: 3-16                 [128, 16, 32, 32]         2,304
+│    │    └─BatchNorm2d: 3-17            [128, 16, 32, 32]         32
+│    │    └─Conv2d: 3-18                 [128, 16, 32, 32]         2,304
+│    │    └─BatchNorm2d: 3-19            [128, 16, 32, 32]         32
+│    │    └─Sequential: 3-20             [128, 16, 32, 32]         --
+│    └─BasicBlock: 2-5                   [128, 16, 32, 32]         --
+│    │    └─Conv2d: 3-21                 [128, 16, 32, 32]         2,304
+│    │    └─BatchNorm2d: 3-22            [128, 16, 32, 32]         32
+│    │    └─Conv2d: 3-23                 [128, 16, 32, 32]         2,304
+│    │    └─BatchNorm2d: 3-24            [128, 16, 32, 32]         32
+│    │    └─Sequential: 3-25             [128, 16, 32, 32]         --
+├─Sequential: 1-4                        [128, 32, 16, 16]         --
+│    └─BasicBlock: 2-6                   [128, 32, 16, 16]         --
+│    │    └─Conv2d: 3-26                 [128, 32, 16, 16]         4,608
+│    │    └─BatchNorm2d: 3-27            [128, 32, 16, 16]         64
+│    │    └─Conv2d: 3-28                 [128, 32, 16, 16]         9,216
+│    │    └─BatchNorm2d: 3-29            [128, 32, 16, 16]         64
+│    │    └─LambdaLayer: 3-30            [128, 32, 16, 16]         --
+│    └─BasicBlock: 2-7                   [128, 32, 16, 16]         --
+│    │    └─Conv2d: 3-31                 [128, 32, 16, 16]         9,216
+│    │    └─BatchNorm2d: 3-32            [128, 32, 16, 16]         64
+│    │    └─Conv2d: 3-33                 [128, 32, 16, 16]         9,216
+│    │    └─BatchNorm2d: 3-34            [128, 32, 16, 16]         64
+│    │    └─Sequential: 3-35             [128, 32, 16, 16]         --
+│    └─BasicBlock: 2-8                   [128, 32, 16, 16]         --
+│    │    └─Conv2d: 3-36                 [128, 32, 16, 16]         9,216
+│    │    └─BatchNorm2d: 3-37            [128, 32, 16, 16]         64
+│    │    └─Conv2d: 3-38                 [128, 32, 16, 16]         9,216
+│    │    └─BatchNorm2d: 3-39            [128, 32, 16, 16]         64
+│    │    └─Sequential: 3-40             [128, 32, 16, 16]         --
+│    └─BasicBlock: 2-9                   [128, 32, 16, 16]         --
+│    │    └─Conv2d: 3-41                 [128, 32, 16, 16]         9,216
+│    │    └─BatchNorm2d: 3-42            [128, 32, 16, 16]         64
+│    │    └─Conv2d: 3-43                 [128, 32, 16, 16]         9,216
+│    │    └─BatchNorm2d: 3-44            [128, 32, 16, 16]         64
+│    │    └─Sequential: 3-45             [128, 32, 16, 16]         --
+│    └─BasicBlock: 2-10                  [128, 32, 16, 16]         --
+│    │    └─Conv2d: 3-46                 [128, 32, 16, 16]         9,216
+│    │    └─BatchNorm2d: 3-47            [128, 32, 16, 16]         64
+│    │    └─Conv2d: 3-48                 [128, 32, 16, 16]         9,216
+│    │    └─BatchNorm2d: 3-49            [128, 32, 16, 16]         64
+│    │    └─Sequential: 3-50             [128, 32, 16, 16]         --
+├─Sequential: 1-5                        [128, 64, 8, 8]           --
+│    └─BasicBlock: 2-11                  [128, 64, 8, 8]           --
+│    │    └─Conv2d: 3-51                 [128, 64, 8, 8]           18,432
+│    │    └─BatchNorm2d: 3-52            [128, 64, 8, 8]           128
+│    │    └─Conv2d: 3-53                 [128, 64, 8, 8]           36,864
+│    │    └─BatchNorm2d: 3-54            [128, 64, 8, 8]           128
+│    │    └─LambdaLayer: 3-55            [128, 64, 8, 8]           --
+│    └─BasicBlock: 2-12                  [128, 64, 8, 8]           --
+│    │    └─Conv2d: 3-56                 [128, 64, 8, 8]           36,864
+│    │    └─BatchNorm2d: 3-57            [128, 64, 8, 8]           128
+│    │    └─Conv2d: 3-58                 [128, 64, 8, 8]           36,864
+│    │    └─BatchNorm2d: 3-59            [128, 64, 8, 8]           128
+│    │    └─Sequential: 3-60             [128, 64, 8, 8]           --
+│    └─BasicBlock: 2-13                  [128, 64, 8, 8]           --
+│    │    └─Conv2d: 3-61                 [128, 64, 8, 8]           36,864
+│    │    └─BatchNorm2d: 3-62            [128, 64, 8, 8]           128
+│    │    └─Conv2d: 3-63                 [128, 64, 8, 8]           36,864
+│    │    └─BatchNorm2d: 3-64            [128, 64, 8, 8]           128
+│    │    └─Sequential: 3-65             [128, 64, 8, 8]           --
+│    └─BasicBlock: 2-14                  [128, 64, 8, 8]           --
+│    │    └─Conv2d: 3-66                 [128, 64, 8, 8]           36,864
+│    │    └─BatchNorm2d: 3-67            [128, 64, 8, 8]           128
+│    │    └─Conv2d: 3-68                 [128, 64, 8, 8]           36,864
+│    │    └─BatchNorm2d: 3-69            [128, 64, 8, 8]           128
+│    │    └─Sequential: 3-70             [128, 64, 8, 8]           --
+│    └─BasicBlock: 2-15                  [128, 64, 8, 8]           --
+│    │    └─Conv2d: 3-71                 [128, 64, 8, 8]           36,864
+│    │    └─BatchNorm2d: 3-72            [128, 64, 8, 8]           128
+│    │    └─Conv2d: 3-73                 [128, 64, 8, 8]           36,864
+│    │    └─BatchNorm2d: 3-74            [128, 64, 8, 8]           128
+│    │    └─Sequential: 3-75             [128, 64, 8, 8]           --
+├─Linear: 1-6                            [128, 10]                 650
+==========================================================================================
+Total params: 464,154
+Trainable params: 464,154
+Non-trainable params: 0
+Total mult-adds (G): 8.81
+==========================================================================================
+Input size (MB): 1.57
+Forward/backward pass size (MB): 620.77
+Params size (MB): 1.86
+Estimated Total Size (MB): 624.20
+==========================================================================================
+KFACPreconditioner(
+  accumulation_steps=1,
+  allreduce_bucket_cap_mb=25,
+  allreduce_method=AllreduceMethod.ALLREDUCE_BUCKETED,
+  assignment=KAISAAssignment,
+  assignment_strategy=AssignmentStrategy.COMPUTE,
+  colocate_factors=True,
+  compute_eigenvalue_outer_product=True,
+  compute_method=ComputeMethod.EIGEN,
+  damping=0.003,
+  distributed_strategy=DistributedStrategy.COMM_OPT,
+  factor_decay=0.95,
+  factor_dtype=None,
+  factor_update_steps=1,
+  grad_scaler=False,
+  grad_worker_fraction=1.0,
+  inv_dtype=torch.float32,
+  inv_update_steps=10,
+  kl_clip=0.001,
+  layers=32,
+  loglevel=10,
+  lr=<function get_optimizer.<locals>.<lambda> at 0x7f65203973a0>,
+  skip_layers=[],
+  steps=0,
+  symmetry_aware=False,
+  update_factors_in_hook=True,
+)
+Epoch   1/100: 100%|██████████| 391/391 [01:05<00:00,  5.93it/s, loss: 1.7702, acc:
+             : 100%|██████████| val_loss: 1.3752, val_acc: 51.68%
+Epoch   2/100: 100%|██████████| 391/391 [01:06<00:00,  5.89it/s, loss: 1.1862, acc:
+             : 100%|██████████| val_loss: 1.2780, val_acc: 58.83%
+Epoch   3/100: 100%|██████████| 391/391 [01:06<00:00,  5.89it/s, loss: 0.9124, acc:
+             : 100%|██████████| val_loss: 1.0174, val_acc: 66.79%
+Epoch   4/100: 100%|██████████| 391/391 [01:06<00:00,  5.89it/s, loss: 0.7775, acc:
+             : 100%|██████████| val_loss: 0.9239, val_acc: 70.12%
+Epoch   5/100: 100%|██████████| 391/391 [01:06<00:00,  5.91it/s, loss: 0.7220, acc:
+             : 100%|██████████| val_loss: 0.8578, val_acc: 72.01%
+Epoch   6/100: 100%|██████████| 391/391 [01:06<00:00,  5.92it/s, loss: 0.6807, acc:
+             : 100%|██████████| val_loss: 1.0277, val_acc: 69.19%
+Epoch   7/100: 100%|██████████| 391/391 [01:06<00:00,  5.92it/s, loss: 0.6380, acc:
+             : 100%|██████████| val_loss: 0.7751, val_acc: 74.25%
+Epoch   8/100: 100%|██████████| 391/391 [01:05<00:00,  5.93it/s, loss: 0.6272, acc:
+             : 100%|██████████| val_loss: 0.6221, val_acc: 78.53%
+Epoch   9/100: 100%|██████████| 391/391 [01:06<00:00,  5.92it/s, loss: 0.6050, acc:
+             : 100%|██████████| val_loss: 0.7486, val_acc: 75.35%
+Epoch  10/100: 100%|██████████| 391/391 [01:06<00:00,  5.92it/s, loss: 0.5908, acc:
+             : 100%|██████████| val_loss: 0.8531, val_acc: 72.91%
+Epoch  11/100: 100%|██████████| 391/391 [01:06<00:00,  5.92it/s, loss: 0.5728, acc:
+             : 100%|██████████| val_loss: 0.7139, val_acc: 76.72%
+Epoch  12/100: 100%|██████████| 391/391 [01:05<00:00,  5.93it/s, loss: 0.5620, acc:
+             : 100%|██████████| val_loss: 1.0642, val_acc: 68.40%
+Epoch  13/100: 100%|██████████| 391/391 [01:05<00:00,  5.93it/s, loss: 0.5545, acc:
+             : 100%|██████████| val_loss: 0.7015, val_acc: 77.19%
+Epoch  14/100: 100%|██████████| 391/391 [01:05<00:00,  5.93it/s, loss: 0.5466, acc:
+             : 100%|██████████| val_loss: 0.6429, val_acc: 78.22%
+Epoch  15/100: 100%|██████████| 391/391 [01:05<00:00,  5.93it/s, loss: 0.5327, acc:
+             : 100%|██████████| val_loss: 0.6660, val_acc: 77.65%
+Epoch  16/100: 100%|██████████| 391/391 [01:05<00:00,  5.94it/s, loss: 0.5294, acc:
+             : 100%|██████████| val_loss: 0.7762, val_acc: 75.59%
+Epoch  17/100: 100%|██████████| 391/391 [01:05<00:00,  5.93it/s, loss: 0.5306, acc:
+             : 100%|██████████| val_loss: 0.7309, val_acc: 76.03%
+Epoch  18/100: 100%|██████████| 391/391 [01:05<00:00,  5.93it/s, loss: 0.5156, acc:
+             : 100%|██████████| val_loss: 0.7598, val_acc: 75.45%
+Epoch  19/100: 100%|██████████| 391/391 [01:06<00:00,  5.92it/s, loss: 0.5020, acc:
+             : 100%|██████████| val_loss: 0.8123, val_acc: 73.25%
+Epoch  20/100: 100%|██████████| 391/391 [01:05<00:00,  5.94it/s, loss: 0.5088, acc:
+             : 100%|██████████| val_loss: 0.9280, val_acc: 72.41%
+Epoch  21/100: 100%|██████████| 391/391 [01:06<00:00,  5.91it/s, loss: 0.5018, acc:
+             : 100%|██████████| val_loss: 0.8398, val_acc: 75.37%
+Epoch  22/100: 100%|██████████| 391/391 [01:05<00:00,  5.94it/s, loss: 0.5053, acc:
+             : 100%|██████████| val_loss: 0.8203, val_acc: 73.68%
+Epoch  23/100: 100%|██████████| 391/391 [01:05<00:00,  5.93it/s, loss: 0.4927, acc:
+             : 100%|██████████| val_loss: 0.7640, val_acc: 76.13%
+Epoch  24/100: 100%|██████████| 391/391 [01:05<00:00,  5.93it/s, loss: 0.4918, acc:
+             : 100%|██████████| val_loss: 0.8177, val_acc: 74.52%
+Epoch  25/100: 100%|██████████| 391/391 [01:05<00:00,  5.94it/s, loss: 0.5008, acc:
+             : 100%|██████████| val_loss: 1.3280, val_acc: 64.33%
+Epoch  26/100: 100%|██████████| 391/391 [01:05<00:00,  5.94it/s, loss: 0.4843, acc:
+             : 100%|██████████| val_loss: 0.9664, val_acc: 71.86%
+Epoch  27/100: 100%|██████████| 391/391 [01:05<00:00,  5.93it/s, loss: 0.4878, acc:
+             : 100%|██████████| val_loss: 1.0582, val_acc: 69.98%
+Epoch  28/100: 100%|██████████| 391/391 [01:05<00:00,  5.94it/s, loss: 0.4820, acc:
+             : 100%|██████████| val_loss: 0.7497, val_acc: 76.47%
+Epoch  29/100: 100%|██████████| 391/391 [01:05<00:00,  5.93it/s, loss: 0.4835, acc:
+             : 100%|██████████| val_loss: 0.7564, val_acc: 74.48%
+Epoch  30/100: 100%|██████████| 391/391 [01:05<00:00,  5.93it/s, loss: 0.4858, acc:
+             : 100%|██████████| val_loss: 0.6966, val_acc: 77.99%
+Epoch  31/100: 100%|██████████| 391/391 [01:06<00:00,  5.91it/s, loss: 0.4742, acc:
+             : 100%|██████████| val_loss: 0.7575, val_acc: 75.96%
+Epoch  32/100: 100%|██████████| 391/391 [01:05<00:00,  5.94it/s, loss: 0.4704, acc:
+             : 100%|██████████| val_loss: 0.7971, val_acc: 74.59%
+Epoch  33/100: 100%|██████████| 391/391 [01:05<00:00,  5.95it/s, loss: 0.4662, acc:
+             : 100%|██████████| val_loss: 0.7604, val_acc: 75.94%
+Epoch  34/100: 100%|██████████| 391/391 [01:05<00:00,  5.94it/s, loss: 0.4765, acc:
+             : 100%|██████████| val_loss: 0.6546, val_acc: 79.56%
+Epoch  35/100: 100%|██████████| 391/391 [01:05<00:00,  5.94it/s, loss: 0.4694, acc:
+             : 100%|██████████| val_loss: 0.7338, val_acc: 78.39%
+Epoch  36/100: 100%|██████████| 391/391 [01:05<00:00,  5.93it/s, loss: 0.4079, acc:
+             : 100%|██████████| val_loss: 0.5416, val_acc: 82.46%
+Epoch  37/100: 100%|██████████| 391/391 [01:05<00:00,  5.95it/s, loss: 0.3727, acc:
+             : 100%|██████████| val_loss: 0.4526, val_acc: 85.26%
+Epoch  38/100: 100%|██████████| 391/391 [01:06<00:00,  5.92it/s, loss: 0.3459, acc:
+             : 100%|██████████| val_loss: 0.4850, val_acc: 83.90%
+Epoch  39/100: 100%|██████████| 391/391 [01:08<00:00,  5.73it/s, loss: 0.3171, acc:
+             : 100%|██████████| val_loss: 0.4491, val_acc: 85.68%
+Epoch  40/100: 100%|██████████| 391/391 [01:07<00:00,  5.81it/s, loss: 0.2962, acc:
+             : 100%|██████████| val_loss: 0.4651, val_acc: 85.15%
+Epoch  41/100: 100%|██████████| 391/391 [01:07<00:00,  5.76it/s, loss: 0.2836, acc:
+             : 100%|██████████| val_loss: 0.3826, val_acc: 88.03%
+Epoch  42/100: 100%|██████████| 391/391 [01:06<00:00,  5.90it/s, loss: 0.2699, acc:
+             : 100%|██████████| val_loss: 0.3894, val_acc: 87.53%
+Epoch  43/100: 100%|██████████| 391/391 [01:07<00:00,  5.77it/s, loss: 0.2576, acc:
+             : 100%|██████████| val_loss: 0.4068, val_acc: 87.19%
+Epoch  44/100: 100%|██████████| 391/391 [01:07<00:00,  5.82it/s, loss: 0.2435, acc:
+             : 100%|██████████| val_loss: 0.4070, val_acc: 87.17%
+Epoch  45/100: 100%|██████████| 391/391 [01:07<00:00,  5.80it/s, loss: 0.2317, acc:
+             : 100%|██████████| val_loss: 0.4021, val_acc: 87.40%
+Epoch  46/100: 100%|██████████| 391/391 [01:07<00:00,  5.81it/s, loss: 0.2295, acc:
+             : 100%|██████████| val_loss: 0.3775, val_acc: 87.95%
+Epoch  47/100: 100%|██████████| 391/391 [01:07<00:00,  5.82it/s, loss: 0.2189, acc:
+             : 100%|██████████| val_loss: 0.3499, val_acc: 88.79%
+Epoch  48/100: 100%|██████████| 391/391 [01:06<00:00,  5.85it/s, loss: 0.2129, acc:
+             : 100%|██████████| val_loss: 0.3739, val_acc: 88.09%
+Epoch  49/100: 100%|██████████| 391/391 [01:06<00:00,  5.86it/s, loss: 0.2089, acc:
+             : 100%|██████████| val_loss: 0.3801, val_acc: 88.40%
+Epoch  50/100: 100%|██████████| 391/391 [01:06<00:00,  5.85it/s, loss: 0.2011, acc:
+             : 100%|██████████| val_loss: 0.3590, val_acc: 88.88%
+Epoch  51/100: 100%|██████████| 391/391 [01:06<00:00,  5.84it/s, loss: 0.1979, acc:
+             : 100%|██████████| val_loss: 0.4086, val_acc: 87.56%
+Epoch  52/100: 100%|██████████| 391/391 [01:06<00:00,  5.92it/s, loss: 0.1903, acc:
+             : 100%|██████████| val_loss: 0.4355, val_acc: 86.89%
+Epoch  53/100: 100%|██████████| 391/391 [01:06<00:00,  5.92it/s, loss: 0.1918, acc:
+             : 100%|██████████| val_loss: 0.4225, val_acc: 87.21%
+Epoch  54/100: 100%|██████████| 391/391 [01:06<00:00,  5.89it/s, loss: 0.1788, acc:
+             : 100%|██████████| val_loss: 0.3850, val_acc: 88.50%
+Epoch  55/100: 100%|██████████| 391/391 [01:07<00:00,  5.83it/s, loss: 0.1758, acc:
+             : 100%|██████████| val_loss: 0.4401, val_acc: 86.74%
+Epoch  56/100: 100%|██████████| 391/391 [01:06<00:00,  5.85it/s, loss: 0.1789, acc:
+             : 100%|██████████| val_loss: 0.4778, val_acc: 86.07%
+Epoch  57/100: 100%|██████████| 391/391 [01:07<00:00,  5.82it/s, loss: 0.1716, acc:
+             : 100%|██████████| val_loss: 0.3512, val_acc: 89.64%
+Epoch  58/100: 100%|██████████| 391/391 [01:07<00:00,  5.80it/s, loss: 0.1775, acc:
+             : 100%|██████████| val_loss: 0.4063, val_acc: 87.90%
+Epoch  59/100: 100%|██████████| 391/391 [01:07<00:00,  5.79it/s, loss: 0.1611, acc:
+             : 100%|██████████| val_loss: 0.3995, val_acc: 88.74%
+Epoch  60/100: 100%|██████████| 391/391 [01:07<00:00,  5.75it/s, loss: 0.1625, acc:
+             : 100%|██████████| val_loss: 0.3935, val_acc: 88.05%
+Epoch  61/100: 100%|██████████| 391/391 [01:08<00:00,  5.74it/s, loss: 0.1606, acc:
+             : 100%|██████████| val_loss: 0.4003, val_acc: 88.15%
+Epoch  62/100: 100%|██████████| 391/391 [01:07<00:00,  5.79it/s, loss: 0.1564, acc:
+             : 100%|██████████| val_loss: 0.3876, val_acc: 88.86%
+Epoch  63/100: 100%|██████████| 391/391 [01:07<00:00,  5.78it/s, loss: 0.1565, acc:
+             : 100%|██████████| val_loss: 0.3905, val_acc: 88.63%
+Epoch  64/100: 100%|██████████| 391/391 [01:06<00:00,  5.87it/s, loss: 0.1519, acc:
+             : 100%|██████████| val_loss: 0.4159, val_acc: 88.41%
+Epoch  65/100: 100%|██████████| 391/391 [01:09<00:00,  5.66it/s, loss: 0.1500, acc:
+             : 100%|██████████| val_loss: 0.3834, val_acc: 89.55%
+Epoch  66/100: 100%|██████████| 391/391 [01:07<00:00,  5.80it/s, loss: 0.1523, acc:
+             : 100%|██████████| val_loss: 0.3920, val_acc: 88.62%
+Epoch  67/100: 100%|██████████| 391/391 [01:07<00:00,  5.78it/s, loss: 0.1520, acc:
+             : 100%|██████████| val_loss: 0.3880, val_acc: 88.74%
+Epoch  68/100: 100%|██████████| 391/391 [01:07<00:00,  5.79it/s, loss: 0.1515, acc:
+             : 100%|██████████| val_loss: 0.4364, val_acc: 87.57%
+Epoch  69/100: 100%|██████████| 391/391 [01:07<00:00,  5.81it/s, loss: 0.1508, acc:
+             : 100%|██████████| val_loss: 0.3633, val_acc: 89.59%
+Epoch  70/100: 100%|██████████| 391/391 [01:06<00:00,  5.85it/s, loss: 0.1461, acc:
+             : 100%|██████████| val_loss: 0.3938, val_acc: 88.64%
+Epoch  71/100: 100%|██████████| 391/391 [01:07<00:00,  5.80it/s, loss: 0.1481, acc:
+             : 100%|██████████| val_loss: 0.3458, val_acc: 89.69%
+Epoch  72/100: 100%|██████████| 391/391 [01:06<00:00,  5.88it/s, loss: 0.1430, acc:
+             : 100%|██████████| val_loss: 0.4629, val_acc: 87.80%
+Epoch  73/100: 100%|██████████| 391/391 [01:06<00:00,  5.84it/s, loss: 0.1439, acc:
+             : 100%|██████████| val_loss: 0.4811, val_acc: 87.77%
+Epoch  74/100: 100%|██████████| 391/391 [01:07<00:00,  5.79it/s, loss: 0.1440, acc:
+             : 100%|██████████| val_loss: 0.4996, val_acc: 87.76%
+Epoch  75/100: 100%|██████████| 391/391 [01:06<00:00,  5.86it/s, loss: 0.1386, acc:
+             : 100%|██████████| val_loss: 0.4642, val_acc: 87.80%
+Epoch  76/100: 100%|██████████| 391/391 [01:08<00:00,  5.72it/s, loss: 0.0817, acc:
+             : 100%|██████████| val_loss: 0.2725, val_acc: 91.85%
+Epoch  77/100: 100%|██████████| 391/391 [01:08<00:00,  5.67it/s, loss: 0.0613, acc:
+             : 100%|██████████| val_loss: 0.2713, val_acc: 91.93%
+Epoch  78/100: 100%|██████████| 391/391 [01:09<00:00,  5.63it/s, loss: 0.0538, acc:
+             : 100%|██████████| val_loss: 0.2713, val_acc: 92.27%
+Epoch  79/100: 100%|██████████| 391/391 [01:12<00:00,  5.39it/s, loss: 0.0470, acc:
+             : 100%|██████████| val_loss: 0.2770, val_acc: 92.44%
+Epoch  80/100: 100%|██████████| 391/391 [01:10<00:00,  5.51it/s, loss: 0.0432, acc:
+             : 100%|██████████| val_loss: 0.2757, val_acc: 92.41%
+Epoch  81/100: 100%|██████████| 391/391 [01:11<00:00,  5.49it/s, loss: 0.0415, acc:
+             : 100%|██████████| val_loss: 0.2814, val_acc: 92.38%
+Epoch  82/100: 100%|██████████| 391/391 [01:11<00:00,  5.50it/s, loss: 0.0391, acc:
+             : 100%|██████████| val_loss: 0.2786, val_acc: 92.57%
+Epoch  83/100: 100%|██████████| 391/391 [01:11<00:00,  5.48it/s, loss: 0.0370, acc:
+             : 100%|██████████| val_loss: 0.2815, val_acc: 92.46%
+Epoch  84/100: 100%|██████████| 391/391 [01:10<00:00,  5.55it/s, loss: 0.0335, acc:
+             : 100%|██████████| val_loss: 0.2886, val_acc: 92.55%
+Epoch  85/100: 100%|██████████| 391/391 [01:13<00:00,  5.34it/s, loss: 0.0344, acc:
+             : 100%|██████████| val_loss: 0.2897, val_acc: 92.63%
+Epoch  86/100: 100%|██████████| 391/391 [01:12<00:00,  5.42it/s, loss: 0.0305, acc:
+             : 100%|██████████| val_loss: 0.2947, val_acc: 92.49%
+Epoch  87/100: 100%|██████████| 391/391 [01:11<00:00,  5.46it/s, loss: 0.0290, acc:
+             : 100%|██████████| val_loss: 0.3010, val_acc: 92.45%
+Epoch  88/100: 100%|██████████| 391/391 [01:11<00:00,  5.46it/s, loss: 0.0284, acc:
+             : 100%|██████████| val_loss: 0.2987, val_acc: 92.45%
+Epoch  89/100: 100%|██████████| 391/391 [01:11<00:00,  5.46it/s, loss: 0.0275, acc:
+             : 100%|██████████| val_loss: 0.3022, val_acc: 92.54%
+Epoch  90/100: 100%|██████████| 391/391 [01:12<00:00,  5.39it/s, loss: 0.0272, acc:
+             : 100%|██████████| val_loss: 0.3041, val_acc: 92.63%
+Epoch  91/100: 100%|██████████| 391/391 [01:11<00:00,  5.47it/s, loss: 0.0239, acc:
+             : 100%|██████████| val_loss: 0.3043, val_acc: 92.51%
+Epoch  92/100: 100%|██████████| 391/391 [01:11<00:00,  5.48it/s, loss: 0.0233, acc:
+             : 100%|██████████| val_loss: 0.2987, val_acc: 92.70%
+Epoch  93/100: 100%|██████████| 391/391 [01:11<00:00,  5.48it/s, loss: 0.0233, acc:
+             : 100%|██████████| val_loss: 0.3011, val_acc: 92.60%
+Epoch  94/100: 100%|██████████| 391/391 [01:10<00:00,  5.57it/s, loss: 0.0230, acc:
+             : 100%|██████████| val_loss: 0.3023, val_acc: 92.60%
+Epoch  95/100: 100%|██████████| 391/391 [01:11<00:00,  5.48it/s, loss: 0.0224, acc:
+             : 100%|██████████| val_loss: 0.3050, val_acc: 92.68%
+Epoch  96/100: 100%|██████████| 391/391 [01:09<00:00,  5.60it/s, loss: 0.0220, acc:
+             : 100%|██████████| val_loss: 0.3037, val_acc: 92.63%
+Epoch  97/100: 100%|██████████| 391/391 [01:10<00:00,  5.56it/s, loss: 0.0217, acc:
+             : 100%|██████████| val_loss: 0.3034, val_acc: 92.65%
+Epoch  98/100: 100%|██████████| 391/391 [01:10<00:00,  5.58it/s, loss: 0.0219, acc:
+             : 100%|██████████| val_loss: 0.3022, val_acc: 92.64%
+Epoch  99/100: 100%|██████████| 391/391 [01:10<00:00,  5.58it/s, loss: 0.0220, acc:
+             : 100%|██████████| val_loss: 0.3040, val_acc: 92.58%
+Epoch 100/100: 100%|██████████| 391/391 [01:10<00:00,  5.57it/s, loss: 0.0213, acc:
+             : 100%|██████████| val_loss: 0.3035, val_acc: 92.65%
+
+Training time: 1:54:16.612000
+

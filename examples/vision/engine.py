@@ -121,7 +121,7 @@ def test(
     loss_func: torch.nn.Module,
     val_loader: torch.utils.data.DataLoader[SampleT],
     args: argparse.Namespace,
-) -> None:
+):
     """Test the model."""
     model.eval()
     val_loss = Metric('val_loss')
@@ -154,3 +154,4 @@ def test(
     if args.log_writer is not None:
         args.log_writer.add_scalar('val/loss', val_loss.avg, epoch)
         args.log_writer.add_scalar('val/accuracy', val_accuracy.avg, epoch)
+    return val_loss
