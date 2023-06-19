@@ -17,7 +17,7 @@ class LearningMode(Enum):
     ADAMS = 1
     SGD = 2
     KFAC_WITH_SGD = 3
-
+    KFAC_WITH_ADAM = 4
 
 def get_optimizer(
     model: torch.nn.Module,
@@ -31,12 +31,12 @@ def get_optimizer(
         kfac.scheduler.LambdaParamScheduler | None,
     ],
 ]:
+    
     """Get optimizer, preconditioner, and scheduler."""
-    if mode == LearningMode.ADAMS:
+    if mode == LearningMode.ADAMS or mode == LearningMode.KFAC_WITH_ADAM:
         optimizer = torch.optim.Adam(
             model.parameters(),
-            lr=args.base_lr,
-            momentum=args.momentum,
+            lr=args.adams_lr,
             weight_decay=args.weight_decay,
         )
     else:
@@ -65,7 +65,7 @@ def get_optimizer(
             f'Unknown KFAC Comm Method: {args.kfac_strategy}',
         )
 
-    if mode == LearningMode.KFAC_WITH_SGD:
+    if mode == LearningMode.KFAC_WITH_SGD or mode == LearningMode.KFAC_WITH_ADAM:
         preconditioner = kfac.preconditioner.KFACPreconditioner(
             model,
             factor_update_steps=args.kfac_factor_update_steps,
