@@ -10,10 +10,18 @@ import torch.optim as optim
 
 import kfac
 from examples.utils import create_lr_schedule
+from enum import Enum
+
+
+class LearningMode(Enum):
+    ADAMS = 1
+    SGD = 2
+    KFAC_WITH_SGD = 3
 
 
 def get_optimizer(
     model: torch.nn.Module,
+    mode: LearningMode,
     args: argparse.Namespace,
 ) -> tuple[
     optim.Optimizer,
@@ -24,14 +32,20 @@ def get_optimizer(
     ],
 ]:
     """Get optimizer, preconditioner, and scheduler."""
-    use_kfac = True if args.kfac_inv_update_steps > 0 else False
-
-    optimizer = optim.SGD(
-        model.parameters(),
-        lr=args.base_lr,
-        momentum=args.momentum,
-        weight_decay=args.weight_decay,
-    )
+    if mode == LearningMode.ADAMS:
+        optimizer = torch.optim.Adam(
+            model.parameters(),
+            lr=args.base_lr,
+            momentum=args.momentum,
+            weight_decay=args.weight_decay,
+        )
+    else:
+        optimizer = optim.SGD(
+            model.parameters(),
+            lr=args.base_lr,
+            momentum=args.momentum,
+            weight_decay=args.weight_decay,
+        )
     lrs = create_lr_schedule(
         dist.get_world_size(),
         args.warmup_epochs,
@@ -51,7 +65,7 @@ def get_optimizer(
             f'Unknown KFAC Comm Method: {args.kfac_strategy}',
         )
 
-    if use_kfac:
+    if mode == LearningMode.KFAC_WITH_SGD:
         preconditioner = kfac.preconditioner.KFACPreconditioner(
             model,
             factor_update_steps=args.kfac_factor_update_steps,
